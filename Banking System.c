@@ -9,7 +9,7 @@ struct account
     char father[20], mother[20], address[40];
     unsigned long long number;
 };
-int string_check(char *words)
+int string_check(char words[])
 {
     int i, j;
     j = strlen(words);
@@ -19,9 +19,9 @@ int string_check(char *words)
     }
     for (i = 0; i < j; i++)
     {
-        if (isalpha(*(words + i)) == 0)
+        if (isalpha(words[i]) == 0)
         {
-            if (*(words + i) != ' ')
+            if (words[i] != ' ')
             {
                 return 1;
             }
